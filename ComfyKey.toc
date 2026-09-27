@@ -1,0 +1,17 @@
+## Interface: 16001
+## Title: ComfyKey
+## Notes: Safe named keybinding profiles with preview, recovery and import/export for WoW Forever.
+## Notes-deDE: Sichere benannte Tastenbelegungsprofile mit Vorschau, Wiederherstellung und Import/Export für WoW Forever.
+## Author: TheRealDoubleG
+## Version: 0.1
+## SavedVariables: ComfyKeyDB
+## X-Website: https://github.com/TheRealDoubleG/ComfyKey
+## X-ComfySuite: true
+## X-ComfyUI: 2
+## IconTexture: Interface\\Icons\\INV_Misc_Key_03
+
+Locale.lua
+Core.lua
+SharedSettings.lua
+KeyProfiles.lua
+Options.lua
