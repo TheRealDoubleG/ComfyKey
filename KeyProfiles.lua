@@ -1,7 +1,7 @@
 ComfyKey=ComfyKey or {}
 local A=ComfyKey
 local function Combat() return InCombatLockdown and InCombatLockdown() end
-function A:CaptureBindings() local out={}; if type(GetNumBindings)~="function" or type(GetBinding)~="function" then return out end; local n=tonumber(GetNumBindings()) or 0; for i=1,n do local v={GetBinding(i)}; local cmd=v[1]; if cmd then local keys={}; for x=2,#v do if v[x] and v[x]~="" then keys[#keys+1]=v[x] end end; out[cmd]=keys end end; return out end
+function A:CaptureBindings() local out={}; if type(GetNumBindings)~="function" or type(GetBinding)~="function" then return out end; local n=tonumber(GetNumBindings()) or 0; for i=1,n do local v={GetBinding(i)}; local cmd=v[1]; if cmd then local keys={}; for x=3,#v do if v[x] and v[x]~="" then keys[#keys+1]=v[x] end end; out[cmd]=keys end end; return out end
 local function Keys(t) local a={} for _,k in ipairs(t or {}) do a[#a+1]=k end table.sort(a); return table.concat(a,", ") end
 function A:GetProfileNames() local list={} for n in pairs(self.db.keys.profiles or {}) do list[#list+1]={value=n,text=n} end table.sort(list,function(a,b) return a.text:lower()<b.text:lower() end); return list end
 function A:SaveKeyProfile(name) name=tostring(name or ""):match("^%s*(.-)%s*$"); if name=="" then return false end; self.db.keys.profiles[name]=self:CaptureBindings(); self.db.keys.selected=name; self:RefreshOptions(); return true end
