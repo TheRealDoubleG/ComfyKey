@@ -3,7 +3,7 @@
 ## Notes: Safe named keybinding profiles with preview, recovery and import/export for WoW Forever.
 ## Notes-deDE: Sichere benannte Tastenbelegungsprofile mit Vorschau, Wiederherstellung und Import/Export für WoW Forever.
 ## Author: TheRealDoubleG
-## Version: 0.3
+## Version: 0.4
 ## SavedVariables: ComfyKeyDB
 ## X-Website: https://github.com/TheRealDoubleG/ComfyKey
 ## X-ComfySuite: true
